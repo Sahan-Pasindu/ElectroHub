@@ -401,10 +401,16 @@ public class Billing extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setText("Total");
 
+        txtTotal.setEditable(false);
         txtTotal.setBackground(new Color(0,0,0,0));
         txtTotal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtTotal.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
         txtTotal.setOpaque(false);
+        txtTotal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTotalKeyTyped(evt);
+            }
+        });
 
         txtPaid.setBackground(new Color(0,0,0,0));
         txtPaid.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -414,6 +420,9 @@ public class Billing extends javax.swing.JFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPaidKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPaidKeyTyped(evt);
+            }
         });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -422,10 +431,16 @@ public class Billing extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setText("Balance");
 
+        txtReturn.setEditable(false);
         txtReturn.setBackground(new Color(0,0,0,0));
         txtReturn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtReturn.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
         txtReturn.setOpaque(false);
+        txtReturn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtReturnKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -712,7 +727,7 @@ public class Billing extends javax.swing.JFrame {
             }
         }
         else{
-            JOptionPane.showMessageDialog(this,"Qantity exceded!!");
+            JOptionPane.showMessageDialog(this,"Quantity exceded!");
         
         }
             
@@ -883,6 +898,30 @@ public class Billing extends javax.swing.JFrame {
       a.setVisible(true);
       a.setLocationRelativeTo(null);
     }//GEN-LAST:event_kButton8ActionPerformed
+
+    private void txtTotalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTotalKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_txtTotalKeyTyped
+
+    private void txtPaidKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPaidKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_txtPaidKeyTyped
+
+    private void txtReturnKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReturnKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_txtReturnKeyTyped
 
     /**
      * @param args the command line arguments

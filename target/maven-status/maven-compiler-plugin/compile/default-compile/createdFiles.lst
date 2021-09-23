@@ -8,6 +8,7 @@ com\mycompany\java\Stock$4.class
 com\mycompany\java\Billing$2.class
 com\mycompany\java\RemoveStock$8.class
 com\mycompany\java\NewCustomer.class
+com\mycompany\java\Billing$18.class
 com\mycompany\java\Stock.class
 com\mycompany\java\RemoveStock.class
 com\mycompany\java\ViewCustomers$4.class
@@ -102,6 +103,7 @@ com\mycompany\java\NewCustomer$2.class
 com\mycompany\java\UpdateProduct$1.class
 com\mycompany\java\UpdateCustomer$4.class
 com\mycompany\java\Login$5.class
+com\mycompany\java\Billing$17.class
 com\mycompany\java\ViewCustomers$5.class
 com\mycompany\java\ViewCustomers$8.class
 com\mycompany\java\Billing$9.class
